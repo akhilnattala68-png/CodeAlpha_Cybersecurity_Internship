@@ -1,0 +1,21 @@
+DEPENDENCY VULNERABILITY AUDIT REPORT: VULNERABLE APPLICATION
+Target Manifest: C:\Users\vijay\CodeAlpha_Cybersecurity_Internship\Task3_Secure_Coding_Review\vulnerable_app\requirements.txt
+======================================================================
+VULNERABILITIES DETECTED: 5 Known Security Advisories Found!
+
+[HIGH] flask 2.0.1 - CVE-2023-30861
+  Description: Flask cookie signature validation bypass via secret key disclosure.
+
+[HIGH] werkzeug 2.0.1 - CVE-2023-46136
+  Description: Denial of Service (DoS) via high resource consumption in multipart form data parser.
+
+[HIGH] werkzeug 2.0.1 - CVE-2022-3491
+  Description: Absolute path traversal in safe_join utility function.
+
+[MEDIUM] jinja2 3.0.1 - CVE-2024-22195
+  Description: Cross-site scripting (XSS) in xmlattr filter.
+
+[MEDIUM] requests 2.25.1 - CVE-2023-32681
+  Description: Proxy-Authorization header leak to unexpected HTTPS destinations on redirect.
+
+======================================================================

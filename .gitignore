@@ -1,0 +1,15 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini

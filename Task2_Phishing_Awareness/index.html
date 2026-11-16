@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness & Cyber Threat Defense Training | CodeAlpha</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#hero" class="nav-brand">
+      <div class="brand-shield">🛡️</div>
+      <div class="brand-text">
+        <h1>CodeAlpha CyberShield</h1>
+        <span>Phishing Awareness Training</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#types">Attack Vectors</a></li>
+      <li><a href="#inspector">Email Inspector</a></li>
+      <li><a href="#urls">URL Anatomy</a></li>
+      <li><a href="#psychology">Social Engineering</a></li>
+      <li><a href="#quiz">10-Q Quiz</a></li>
+      <li><a href="#practices">Best Practices</a></li>
+    </ul>
+  </nav>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="progress-container">
+    <span>Module Completion</span>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    </div>
+    <span style="color: var(--accent-cyan); font-weight: 600;">Interactive Lab</span>
+  </div>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+      <div class="hero-tag">DEFENSIVE CYBERSECURITY TRAINING MODULE</div>
+      <h1>Interactive Phishing Awareness & Defense Platform</h1>
+      <p>
+        Phishing is the #1 initial access vector for global cyberattacks, accounting for over 90% of organizational data breaches. Learn to spot deceptive emails, dissect lookalike URLs, recognize social engineering psychological traps, and certify your threat awareness skills.
+      </p>
+      <div class="hero-actions">
+        <a href="#inspector" class="btn btn-primary">🔍 Launch Email Inspector</a>
+        <a href="#quiz" class="btn btn-outline">📝 Take Knowledge Quiz</a>
+      </div>
+    </header>
+
+    <!-- Threat Statistics Grid -->
+    <section class="threat-stats">
+      <div class="threat-card">
+        <div class="stat-num">91%</div>
+        <p>of enterprise cyber breaches start with a targeted phishing email.</p>
+      </div>
+      <div class="threat-card">
+        <div class="stat-num">3.4B</div>
+        <p>malicious phishing emails are dispatched worldwide every 24 hours.</p>
+      </div>
+      <div class="threat-card">
+        <div class="stat-num">82%</div>
+        <p>of phishing landing pages now use valid HTTPS/SSL padlock certificates.</p>
+      </div>
+      <div class="threat-card">
+        <div class="stat-num">&lt; 60s</div>
+        <p>median time from email arrival until first victim credential compromise.</p>
+      </div>
+    </section>
+
+    <!-- Module 1: Overview -->
+    <section class="module-section" id="overview">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 01 // FUNDAMENTALS</span>
+        <h2>What is Phishing?</h2>
+        <p>Understanding the deception architecture of social engineering attacks.</p>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 32px; font-size: 15px; color: var(--text-secondary); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">
+          <strong style="color: var(--text-primary);">Phishing</strong> is a form of social engineering where adversaries impersonate legitimate entities—such as banking institutions, streaming services, healthcare portals, or corporate IT teams—to deceive individuals into performing sensitive actions:
+        </p>
+        <ul style="margin-left: 24px; margin-bottom: 20px;">
+          <li><strong>Disclosing Credentials:</strong> Stealing usernames, passwords, API tokens, and session cookies via spoofed login portals.</li>
+          <li><strong>Executing Financial Fraud:</strong> Trickery leading to unauthorized wire transfers or fraudulent invoice payments.</li>
+          <li><strong>Deploying Malware:</strong> Inducing users to open malicious macro-enabled documents, ZIP files, or executable payloads that establish remote command-and-control (C2) persistence.</li>
+        </ul>
+        <div style="background: rgba(0, 242, 254, 0.08); border-left: 4px solid var(--accent-cyan); padding: 14px 18px; border-radius: 4px; color: var(--text-primary);">
+          <strong>The Human Firewall Principle:</strong> Modern firewalls, EDRs, and spam filters catch millions of threats, but adversaries constantly innovate evasion techniques. An informed, vigilant human is the final and most critical line of defense.
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 2: 6 Types of Phishing -->
+    <section class="module-section" id="types">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 02 // THREAT VECTORS</span>
+        <h2>The 6 Major Categories of Phishing</h2>
+        <p>Adversaries deploy tailored methods depending on their reconnaissance level and intended victim profile.</p>
+      </div>
+
+      <div class="attack-grid">
+        <!-- 1. Email Phishing -->
+        <div class="attack-card">
+          <div class="attack-icon">📧</div>
+          <span class="target-badge">MASS ATTACK VECTOR</span>
+          <h3>1. Email Phishing (Mass Spray)</h3>
+          <p>Generic, automated mass mailings pretending to originate from well-known brands (Amazon, Netflix, PayPal). Designed to cast a broad net across thousands of users simultaneously.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Check for generic greetings ("Dear Customer") and verify sending domains carefully.</div>
+        </div>
+
+        <!-- 2. Spear Phishing -->
+        <div class="attack-card">
+          <div class="attack-icon">🎯</div>
+          <span class="target-badge">TARGETED RECONNAISSANCE</span>
+          <h3>2. Spear Phishing</h3>
+          <p>Highly customized attacks aimed at specific individuals, departments, or companies. Attackers conduct Open Source Intelligence (OSINT) on LinkedIn and social media to reference colleagues, recent projects, and tools.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Independently verify requests via trusted internal communication channels (Slack/Teams).</div>
+        </div>
+
+        <!-- 3. Whaling -->
+        <div class="attack-card">
+          <div class="attack-icon">👑</div>
+          <span class="target-badge">C-LEVEL / FINANCIAL FRAUD</span>
+          <h3>3. Whaling (CEO Fraud / BEC)</h3>
+          <p>A specialized subcategory of spear phishing targeting senior executives (CFOs, CEOs, Board members) or impersonating them to coerce employees into approving large wire transfers or confidential data releases.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Enforce strict dual-authorization controls and verbal out-of-band approvals for financial wires.</div>
+        </div>
+
+        <!-- 4. Smishing -->
+        <div class="attack-card">
+          <div class="attack-icon">📱</div>
+          <span class="target-badge">MOBILE SMS THREAT</span>
+          <h3>4. Smishing (SMS Phishing)</h3>
+          <p>Phishing via SMS text messages. Common lures include fake package delivery reschedules (FedEx, DHL), bank fraud alerts, or lottery notifications containing shortened malicious URLs.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Never click links in SMS; manually visit the delivery carrier's official website or app.</div>
+        </div>
+
+        <!-- 5. Vishing -->
+        <div class="attack-card">
+          <div class="attack-icon">📞</div>
+          <span class="target-badge">VOICE SOCIAL ENGINEERING</span>
+          <h3>5. Vishing (Voice Phishing)</h3>
+          <p>Voice-based impersonation calls. Fraudsters pose as technical support representatives, bank anti-fraud units, or law enforcement to intimidate victims into disclosing one-time passwords (OTPs) or installing remote desktop agents.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Hang up immediately. Call back through official published customer service phone numbers.</div>
+        </div>
+
+        <!-- 6. Clone Phishing -->
+        <div class="attack-card">
+          <div class="attack-icon">📋</div>
+          <span class="target-badge">AUTHENTIC TEMPLATE SPOOF</span>
+          <h3>6. Clone Phishing</h3>
+          <p>Attackers duplicate an authentic, previously delivered email (such as a receipt, routine update, or calendar invite) and replace original links or attachments with malicious counterparts, claiming it is an "updated" version.</p>
+          <div class="defense-tip"><strong>Defense:</strong> Inspect the sender domain and check whether an unexpected revised attachment is truly warranted.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 3: Interactive Email Inspector -->
+    <section class="module-section" id="inspector">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 03 // HANDS-ON LAB</span>
+        <h2>Interactive Email Inspector: Spotting Red Flags</h2>
+        <p>Analyze realistic simulated phishing emails. Click the highlighted red flags to uncover the attacker's deception methods.</p>
+      </div>
+
+      <div class="email-inspector-container">
+        <div class="inspector-controls">
+          <div class="email-tabs">
+            <button class="tab-btn active" data-scenario="scenario1">🎬 Streaming Billing</button>
+            <button class="tab-btn" data-scenario="scenario2">🏢 IT Password Reset</button>
+            <button class="tab-btn" data-scenario="scenario3">💸 Executive Wire Transfer</button>
+          </div>
+          <div class="toggle-switch-wrap">
+            <span>Highlight Red Flags:</span>
+            <label class="switch">
+              <input type="checkbox" id="red-flag-toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div id="simulated-email-box" class="simulated-email flags-active">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <div id="flag-details-box" class="flag-details-box">
+          <!-- Dynamic Explanations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 4: Anatomy of Deceptive URLs -->
+    <section class="module-section" id="urls">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 04 // TECHNICAL FORENSICS</span>
+        <h2>Anatomy of Deceptive URLs & Fake Sites</h2>
+        <p>How cybercriminals construct lookalike domains and why the HTTPS padlock is not proof of legitimacy.</p>
+      </div>
+
+      <div class="url-breakdown-card">
+        <h3>Dissecting a Real vs. Phishing URL</h3>
+        <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">
+          The key to spotting fake links is reading from the <strong>first single slash (/) backwards to the left</strong> to identify the true registered domain.
+        </p>
+
+        <!-- Legitimate URL Breakdown -->
+        <h4 style="margin-top: 24px; color: var(--accent-green); font-size: 14px;">✅ AUTHENTIC DOMAIN:</h4>
+        <div class="url-display">
+          <span class="url-part part-protocol">https://</span>
+          <span class="url-part part-subdomain">www.</span>
+          <span class="url-part" style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: bold; border: 1px solid #10b981;">paypal.com</span>
+          <span class="url-part part-path">/signin</span>
+        </div>
+
+        <!-- Phishing URL Breakdown -->
+        <h4 style="margin-top: 24px; color: var(--accent-red); font-size: 14px;">🚨 PHISHING SPOOFED SUBDOMAIN (TRICK):</h4>
+        <div class="url-display">
+          <span class="url-part part-protocol">https://</span>
+          <span class="url-part part-subdomain">paypal.com.account-verification-security.net</span>
+          <span class="url-part part-domain">attacker-controlled.net</span>
+          <span class="url-part part-path">/login.php</span>
+        </div>
+
+        <div class="url-legend">
+          <div class="legend-item"><div class="legend-color" style="background: #3b82f6;"></div><span>Protocol (https://)</span></div>
+          <div class="legend-item"><div class="legend-color" style="background: #f59e0b;"></div><span>Subdomain (Deceptive Lure)</span></div>
+          <div class="legend-item"><div class="legend-color" style="background: #ef4444;"></div><span>True Domain (Attacker Host)</span></div>
+          <div class="legend-item"><div class="legend-color" style="background: #6b7280;"></div><span>Path / Resource</span></div>
+        </div>
+
+        <div style="margin-top: 24px; background: rgba(245, 158, 11, 0.08); border-left: 4px solid var(--accent-yellow); padding: 14px; border-radius: 4px; font-size: 13px; color: var(--text-primary);">
+          <strong>The Great HTTPS Padlock Myth:</strong> A green padlock or "https://" simply indicates the communication between your browser and the website is encrypted with TLS. It does <em>not</em> mean the owner of the website is trustworthy. Attackers obtain free SSL certificates in seconds. Always inspect the exact domain name!
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 5: Psychological Triggers -->
+    <section class="module-section" id="psychology">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 05 // SOCIAL ENGINEERING</span>
+        <h2>The 6 Psychological Manipulation Triggers</h2>
+        <p>Phishing works not by hacking machines, but by exploiting universal human cognitive vulnerabilities.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-red); margin-bottom: 8px;">⏳ 1. Urgency</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">"Action required within 2 hours or access is terminated!" Creates time pressure to bypass critical thinking.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-yellow); margin-bottom: 8px;">😨 2. Fear & Intimidation</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">"Legal notice: Your company is facing regulatory fines." Prompts panic reactions to avoid severe penalties.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-blue); margin-bottom: 8px;">👔 3. Authority Impersonation</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">Posing as the CEO, Legal Counsel, or Chief Information Security Officer (CISO) to command obedience.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-purple); margin-bottom: 8px;">🎁 4. Greed & Reward</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">"You've been selected for a $500 Amazon Employee Appreciation Gift Card!" Tempts victims with easy gain.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-cyan); margin-bottom: 8px;">🔍 5. Curiosity</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">"Confidential: Q4 Executive Salary Review.xlsx attached." Exploits natural inquisitiveness.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 22px;">
+          <h4 style="color: var(--accent-green); margin-bottom: 8px;">🤝 6. Helpfulness & Sympathy</h4>
+          <p style="font-size: 13px; color: var(--text-secondary);">"Can you please assist me? I'm locked out before the big client presentation." Leverages workplace desire to assist.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 6: 10-Question Knowledge Assessment Quiz -->
+    <section class="module-section" id="quiz">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 06 // KNOWLEDGE ASSESSMENT</span>
+        <h2>Phishing Awareness Certification Quiz</h2>
+        <p>Test your defensive skills with 10 scenario-based questions to earn your Certificate of Completion.</p>
+      </div>
+
+      <!-- Active Quiz Card -->
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-header-bar">
+          <div class="question-counter" id="question-counter">Question 1 of 10</div>
+          <div class="score-tracker" id="score-tracker">Score: 0 / 10</div>
+        </div>
+
+        <div class="question-text" id="question-text">Loading question...</div>
+
+        <div class="options-list" id="options-list">
+          <!-- Dynamic options -->
+        </div>
+
+        <div class="explanation-box" id="explanation-box">
+          <!-- Instant Explanation -->
+        </div>
+
+        <div class="quiz-footer">
+          <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question ➔</button>
+        </div>
+      </div>
+
+      <!-- Completion Screen & Printable Certificate -->
+      <div class="completion-card" id="completion-card">
+        <div class="completion-icon">🏆</div>
+        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 8px;">Training Module Completed!</h2>
+        <div class="score-badge-big" id="final-score-pct">100%</div>
+        <p id="final-score-summary" style="color: var(--text-secondary); margin-bottom: 12px;">You correctly answered 10 out of 10 questions.</p>
+        <div id="completion-badge-text" style="font-size: 16px; font-weight: 700; margin-bottom: 28px;">Certified Threat Defender</div>
+
+        <!-- Name Input for Certificate Customization -->
+        <div style="max-width: 420px; margin: 0 auto 30px; text-align: left;">
+          <label style="font-size: 13px; color: var(--text-secondary); display: block; margin-bottom: 6px;">Enter Your Full Name for Certificate:</label>
+          <input type="text" id="cert-name-input" placeholder="e.g., Alex Johnson" onkeyup="updateCertificateName()" style="width: 100%; padding: 10px 14px; background: #0a0d14; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 14px;">
+        </div>
+
+        <!-- Visual Printable Certificate Frame -->
+        <div class="certificate-frame" id="printable-certificate">
+          <div class="cert-header">CodeAlpha Cybersecurity Academy • Official Accreditation</div>
+          <h2 class="cert-title">CERTIFICATE OF COMPLETION</h2>
+          <p style="font-size: 14px; color: var(--text-muted);">This is proudly awarded to:</p>
+          <div class="cert-recipient" id="cert-recipient-name">Intern Candidate</div>
+          <p class="cert-desc">
+            for successfully completing the rigorous <strong>Phishing Awareness & Social Engineering Defense Training</strong>, demonstrating verified competence in identifying spear phishing, whaling, URL deception, and organizational cyber threat mitigation.
+          </p>
+          <div class="cert-signatures">
+            <div class="cert-sign-block">
+              <h4>CodeAlpha Cybersecurity Mentor</h4>
+              <span>Senior Security Auditor</span>
+            </div>
+            <div class="cert-sign-block">
+              <h4 id="cert-date">November 2026</h4>
+              <span>Verification Date</span>
+            </div>
+            <div class="cert-sign-block">
+              <h4 style="color: var(--accent-green);">VERIFIED AUTHENTIC</h4>
+              <span>Credential ID: CA-SEC-2026-9812</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 16px; margin-top: 24px;">
+          <button class="btn btn-primary" onclick="printCertificate()">🖨️ Print / Save Certificate</button>
+          <button class="btn btn-outline" onclick="restartQuiz()">🔄 Retake Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module 7: Cybersecurity Best Practices -->
+    <section class="module-section" id="practices">
+      <div class="section-header">
+        <span class="sub-badge">MODULE 07 // DEFENSIVE PLAYBOOK</span>
+        <h2>Cybersecurity Best Practices Checklist</h2>
+        <p>Eight non-negotiable defensive habits every cybersecurity professional and employee must uphold.</p>
+      </div>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <div class="practice-icon">🔑</div>
+          <div class="practice-text">
+            <h4>1. Deploy Dedicated Password Managers</h4>
+            <p>Never reuse passwords. Password managers refuse to autofill on spoofed lookalike domains.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🛡️</div>
+          <div class="practice-text">
+            <h4>2. Enforce Hardware or App-Based MFA</h4>
+            <p>Use FIDO2 security keys or authenticator apps. Avoid SMS 2FA, which is susceptible to SIM swapping.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🖱️</div>
+          <div class="practice-text">
+            <h4>3. Hover & Inspect Destination URLs</h4>
+            <p>Hover your cursor over links to inspect the destination URL before clicking. Watch for sneaky typos.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">📞</div>
+          <div class="practice-text">
+            <h4>4. Out-of-Band Verification for Wires</h4>
+            <p>Always verify financial transfer requests via a known internal phone number or face-to-face.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🚨</div>
+          <div class="practice-text">
+            <h4>5. Report Suspicious Inbound Emails</h4>
+            <p>Click your organization's "Report Phish" button immediately so SOC engineers can block the domain perimeter-wide.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🔄</div>
+          <div class="practice-text">
+            <h4>6. Keep Browsers & Endpoints Patched</h4>
+            <p>Regularly apply OS, browser, and security patches to eliminate drive-by download vulnerabilities.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🔒</div>
+          <div class="practice-text">
+            <h4>7. Beware of Remote Support Prompts</h4>
+            <p>Never install TeamViewer, AnyDesk, or screen-sharing tools prompted by unsolicited phone calls.</p>
+          </div>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🧠</div>
+          <div class="practice-text">
+            <h4>8. Pause Under Artificial Urgency</h4>
+            <p>Whenever an email demands immediate compliance within 24 hours under threat of penalties, pause and reflect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid var(--border-color); padding: 32px 24px; text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 60px;">
+    <p>CodeAlpha Cybersecurity Internship Program • Task 2: Phishing Awareness Training Platform</p>
+    <p style="margin-top: 6px;">Safe Educational Simulation • No real credentials collected or external emails dispatched.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

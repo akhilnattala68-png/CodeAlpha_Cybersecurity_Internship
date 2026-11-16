@@ -1,0 +1,11 @@
+DEPENDENCY VULNERABILITY AUDIT REPORT: SECURE APPLICATION
+Target Manifest: C:\Users\vijay\CodeAlpha_Cybersecurity_Internship\Task3_Secure_Coding_Review\secure_app\requirements.txt
+======================================================================
+VULNERABILITIES DETECTED: 0 Known Security Advisories. All dependencies are patched.
+
+[OK] flask (>=3.1.0): Patched against known advisories.
+[OK] werkzeug (>=3.1.0): Patched against multipart DoS and path traversal.
+[OK] jinja2 (>=3.1.5): Patched against xmlattr XSS.
+[OK] requests (>=2.32.0): Patched against Proxy-Authorization disclosure.
+[OK] cryptography (>=43.0.0): Modern secure cryptographic primitives.
+======================================================================
